@@ -5,6 +5,7 @@ http.createServer(function(request,response){
     // response.writeHead(200,{'Content-type':'text/plain'})
     response.writeHead(200,{"Content-type":"text-html;charset=utf-8"})
     //为页面输出一句话
+    response.write("<head><meta charset='utf-8'></meta></head>") //不输入则页面会乱码
     response.write("This is Node.js")
     response.end("你好")
 }).listen("8082")
