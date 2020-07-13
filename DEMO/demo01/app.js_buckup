@@ -1,0 +1,15 @@
+    //引入http模块
+    var http = require('http');
+    http.createServer(function (request, response) {
+        /*  
+            request 表示获取url传递过来的信息
+            response 表示响应浏览器的信息
+        */
+
+        //设置响应头，200表示状态 'Content-Type': 'text/plain'表示响应编码格式
+      response.writeHead(200, {'Content-Type': 'text/plain'});
+      //表示给页面上边输出一句话,并且结束响应
+      response.end('Hello World');
+    }).listen(8081); //网站端口
+    
+    console.log('Server running at http://127.0.0.1:8081/');
