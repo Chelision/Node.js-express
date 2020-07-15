@@ -20,4 +20,41 @@
 
     3、NPM命令详解
         1、npm -v 查看npm版本
+
+        2、npm install *** -S（--save） 下载，如果没有写--save或者-S那么使用cnpm还原的时候是会出现问题的
+
+        3、npm uninstall mudole Name 卸载模块
+
+        4、npm list 查看当前目录下已经安装的node包
+
+        5、npm info ** 查看**的版本
+
+        6、指定版本安装(在版本号前面加一个@符号) npm install jquery@1.8.0
+
+
+    4、dependencies前面的标识符详解
+
+        "dependencies" : {
+            "ejs": "^2.3.4",
+            "express": "~4.13.3"
+        }
+
+        ^ 表示第一位版本号不变，后面两位取最新
+
+        ~ 表示前两位不变，最后一位取最新
+
+        * 表示全部取最新
+
+        什么都不加就表示指定当前版本
+
+    5、淘宝镜像
+
+        http://www.npmjs.org npm管网
+
+        https://npm.taobao.org 淘宝npm镜像管网
+
+        淘宝NPM镜像是一个完整npmjs.org镜像，可以用此替代官方版本（只读），同步频率目前为10分钟一次，一次以保证尽量与官方服务同步。
+
+        npm install -g cnpm --registry==https://registry.npm.taobao.org
+
     
